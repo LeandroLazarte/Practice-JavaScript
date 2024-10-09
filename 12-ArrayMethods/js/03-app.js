@@ -1,17 +1,19 @@
 const carrito = [
-    { nombre: "Monitor Samsung 27", precio: 2000 },
-    { nombre: "iPhone 15 Pro Max", precio: 4000 },
-    { nombre: "Tv Samsung", precio: 6000 },
-    { nombre: "Auriculares gamer", precio: 8000 },
-    { nombre: "Cafetera Expresso", precio: 6500 },
-    { nombre: "Apple Macbook Air", precio: 3000 }
+    { nombre: 'Monitor Samsung 27" 240Hz', precio: 500 },
+    { nombre: 'Iphone 15 Pro 128Gb', precio: 1000 },
+    { nombre: 'Teclado Logitech 915 TKL', precio: 1500 },
+    { nombre: 'Gabinete Corsair Carbide 400cc', precio: 2000 },
+    { nombre: 'Termo Contigo Star Wars', precio: 2500 },
+    { nombre: 'Vaporesso Gen 160', precio: 3000 },
+    { nombre: 'Parlante JBL GO', precio: 3500 }
 ];
 
-// con un ForEach
+// Suma total de carrito ForEach
 let total = 0;
-carrito.forEach((producto) => total += producto.precio);
-console.log(`El total de su carrito es de $${total}`);
+carrito.forEach(producto => total += producto.precio);
+console.log(`Total de tu carrito es: $${total}`);
 
-// Metodo reduce para sumar la totalidad de los precios del carrito
-const resultado = carrito.reduce((total, producto) => total + producto.precio, 0);
-console.log(`El total de su carrito es : $${resultado}`);
+// Suma total de carrito .reduce
+let resultado = carrito.reduce((total, producto) => total + producto.precio, 0);
+console.log(`El valor final de tu carrito es: $${resultado}`);
+

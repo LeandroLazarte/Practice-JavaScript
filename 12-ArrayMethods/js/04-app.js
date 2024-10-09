@@ -1,17 +1,18 @@
 const carrito = [
-    { nombre: "Monitor Samsung 27", precio: 100 },
-    { nombre: "iPhone 15 Pro Max", precio: 200 },
-    { nombre: "Tv Samsung", precio: 300 },
-    { nombre: "Auriculares gamer", precio: 400 },
-    { nombre: "Cafetera Expresso", precio: 500 },
-    { nombre: "Apple Macbook Air", precio: 600 }
+    { nombre: 'Monitor Samsung 27" 240Hz', precio: 500 },
+    { nombre: 'Iphone 15 Pro 128Gb', precio: 300 },
+    { nombre: 'Teclado Logitech 915 TKL', precio: 400 },
+    { nombre: 'Gabinete Corsair Carbide 400cc', precio: 200 },
+    { nombre: 'Termo Contigo Star Wars', precio: 200 },
+    { nombre: 'Vaporesso Gen 160', precio: 300 },
+    { nombre: 'Parlante JBL GO', precio: 400 }
 ];
 
 let resultado;
-// Filtrado por precio mayor o menor
-resultado = carrito.filter((producto) => producto.precio > 300);
-resultado = carrito.filter((producto) => producto.precio < 500);
-// filtrado por nombre
-resultado = carrito.filter((producto) => producto.nombre !== "Tv Samsung");
-resultado = carrito.filter((producto) => producto.nombre === "iPhone 15 Pro Max");
+
+resultado = carrito.filter(producto => producto.precio > 400);
+resultado = carrito.filter(producto => producto.precio < 400);
+resultado = carrito.filter(producto => producto.nombre !== 'Monitor Samsung 27" 240Hz');
+resultado = carrito.filter(producto => producto.nombre === 'Monitor Samsung 27" 240Hz');
+
 console.log(resultado);

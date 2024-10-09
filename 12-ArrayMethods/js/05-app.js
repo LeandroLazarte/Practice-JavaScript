@@ -1,24 +1,26 @@
 const carrito = [
-    { nombre: "Monitor", precio: 100 },
-    { nombre: "iPhone", precio: 200 },
-    { nombre: "Televisor", precio: 300 },
-    { nombre: "Auriculares", precio: 400 },
-    { nombre: "Cafetera", precio: 500 },
-    { nombre: "Notebook", precio: 600 }
+    { nombre: 'Monitor Samsung 27" 240Hz', precio: 500 },
+    { nombre: 'Iphone 15 Pro', precio: 300 },
+    { nombre: 'Teclado Logitech 915 TKL', precio: 400 },
+    { nombre: 'Gabinete Corsair Carbide 400cc', precio: 200 },
+    { nombre: 'Termo Contigo Star Wars', precio: 200 },
+    { nombre: 'Vaporesso Gen 160', precio: 300 },
+    { nombre: 'Parlante JBL GO', precio: 400 }
 ];
 
-// forEach
-let resultado = "";
+let resultado;
+
+// .forEach
 carrito.forEach((producto, index) => {
-    if (producto.nombre === "Cafetera") {
-        resultado = carrito[index];
+    if (producto.nombre === 'Iphone 15 Pro') {
+        resultado = carrito[index]
     }
 })
-console.log(resultado);
+// console.log(resultado);
 
-// filtrar elementos de un arreglo con .find
-const resultadoDos = carrito.find(producto => producto.nombre === "iPhone");
-console.log(resultadoDos);
+// .find
+const resultaDos = carrito.find(producto => producto.precio === 400);
+console.log(resultaDos);
 
-const resultadoTres = carrito.find(producto => producto.nombre === "Televisor");
-console.log(resultadoTres);
+
+

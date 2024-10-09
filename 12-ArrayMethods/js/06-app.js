@@ -1,15 +1,17 @@
 const carrito = [
-    { nombre: "Monitor", precio: 100 },
-    { nombre: "iPhone", precio: 200 },
-    { nombre: "Televisor", precio: 300 },
-    { nombre: "Auriculares", precio: 400 },
-    { nombre: "Cafetera", precio: 500 },
-    { nombre: "Notebook", precio: 600 }
+    { nombre: 'Monitor Samsung 27" 240Hz', precio: 500 },
+    { nombre: 'Iphone 15 Pro', precio: 300 },
+    { nombre: 'Teclado Logitech 915 TKL', precio: 400 },
+    { nombre: 'Gabinete Corsair Carbide 400cc', precio: 200 },
+    { nombre: 'Termo Contigo Star Wars', precio: 200 },
+    { nombre: 'Vaporesso Gen 160', precio: 300 },
+    { nombre: 'Parlante JBL GO', precio: 400 }
 ];
 
-// .every debe cumplir con todas las condiciones para que retorne un true (AND)
-const resultado = carrito.every(producto => producto.precio <= 600);
+// .every se tienen que cumplir todas las condiciones para que retorne true
+const resultado = carrito.every(producto => producto.precio < 600);
 console.log(resultado);
-// .some se debe cumplir a menos una condicion para que retorne true (OR)
-const resultadoDos = carrito.some(producto => producto.precio < 600);
-console.log(resultadoDos);
+
+// .some basta con que se cumpla una sola condicon para que retorne true
+const resultaDos = carrito.some(producto => producto.precio < 400);
+console.log(resultaDos);
